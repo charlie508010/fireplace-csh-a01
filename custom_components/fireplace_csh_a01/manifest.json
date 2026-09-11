@@ -1,0 +1,22 @@
+{
+    "domain": "fireplace_csh_a01",
+    "name": "Fireplace CSH-A01",
+    "codeowners": [
+        "@charlie508010"
+    ],
+    "config_flow": true,
+    "dependencies": [],
+    "documentation": "https://github.com/charlie508010/fireplace-csh-a01",
+    "integration_type": "device",
+    "iot_class": "local_push",
+    "issue_tracker": "https://github.com/charlie508010/fireplace-csh-a01/issues",
+    "loggers": [
+        "fireplace_csh_a01",
+        "tinytuya"
+    ],
+    "requirements": [
+        "tinytuya==1.20.0",
+        "tuya-device-sharing-sdk~=0.2.4"
+    ],
+    "version": "1.0.0"
+}
