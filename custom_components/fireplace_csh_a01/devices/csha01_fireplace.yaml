@@ -27,6 +27,116 @@ entities:
         type: string
         name: ember_bed_color
 
+  # Alexa ignores standalone Matter ModeSelect endpoints. These two light
+  # entities expose the real five-step controls as standard Matter dimmers,
+  # while retaining the exact C*/F* choices as Home Assistant effects.
+  - entity: light
+    name: Flame
+    translation_only_key: flame
+    icon: mdi:fire
+    dps:
+      - id: 10
+        type: boolean
+        name: switch
+      - id: 104
+        type: string
+        name: brightness
+        mapping:
+          - dps_val: L1
+            value: 51
+          - dps_val: L2
+            value: 102
+          - dps_val: L3
+            value: 153
+          - dps_val: L4
+            value: 204
+          - dps_val: L5
+            value: 255
+      - id: 101
+        type: string
+        name: effect
+        mapping:
+          - dps_val: C0
+            value: C0
+          - dps_val: C1
+            value: C1
+          - dps_val: C2
+            value: C2
+          - dps_val: C3
+            value: C3
+          - dps_val: C4
+            value: C4
+          - dps_val: C5
+            value: C5
+
+  - entity: light
+    name: Ember bed
+    translation_only_key: ember_bed
+    icon: mdi:fire-circle
+    dps:
+      - id: 10
+        type: boolean
+        name: switch
+      - id: 103
+        type: string
+        name: brightness
+        mapping:
+          - dps_val: "01"
+            value: 51
+          - dps_val: "02"
+            value: 102
+          - dps_val: "03"
+            value: 153
+          - dps_val: "04"
+            value: 204
+          - dps_val: "05"
+            value: 255
+      - id: 102
+        type: string
+        name: effect
+        mapping:
+          - dps_val: F0
+            value: F0
+          - dps_val: F1
+            value: F1
+          - dps_val: F2
+            value: F2
+          - dps_val: F3
+            value: F3
+          - dps_val: F4
+            value: F4
+          - dps_val: F5
+            value: F5
+
+  # A two-speed fan maps cleanly to Matter Fan Control, which Alexa supports.
+  # Both controls share DP 4: OFF, LO (Stufe 1), HI (Stufe 2).
+  - entity: fan
+    name: Heating stage
+    translation_key: heater_stage
+    icon: mdi:radiator
+    dps:
+      - id: 4
+        type: string
+        name: switch
+        mapping:
+          - dps_val: "OFF"
+            value: false
+          - dps_val: LO
+            value: true
+          - dps_val: HI
+            value: true
+      - id: 4
+        type: string
+        name: speed
+        mapping:
+          - dps_val: "OFF"
+            value: 0
+            hidden: true
+          - dps_val: LO
+            value: 50
+          - dps_val: HI
+            value: 100
+
   - entity: select
     name: Operating mode
     translation_only_key: mode

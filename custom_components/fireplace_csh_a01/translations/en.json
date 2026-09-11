@@ -435,6 +435,9 @@
             }
         },
         "fan": {
+            "heater_stage": {
+                "name": "Heating stage"
+            },
             "air_purifier": {
                 "name": "Air purifier",
                 "state_attributes": {
@@ -534,6 +537,9 @@
             },
             "embers": {
                 "name": "Embers"
+            },
+            "ember_bed": {
+                "name": "Ember bed"
             },
             "flame": {
                 "name": "Flame"

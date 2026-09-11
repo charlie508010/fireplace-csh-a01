@@ -435,6 +435,9 @@
             }
         },
         "fan": {
+            "heater_stage": {
+                "name": "Heizstufe"
+            },
             "air_purifier": {
                 "name": "Luftreiniger",
                 "state_attributes": {
@@ -534,6 +537,9 @@
             },
             "embers": {
                 "name": "Glut"
+            },
+            "ember_bed": {
+                "name": "Glutbett"
             },
             "flame": {
                 "name": "Flamme"

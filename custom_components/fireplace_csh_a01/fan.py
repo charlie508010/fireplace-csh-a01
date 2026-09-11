@@ -190,7 +190,14 @@ class TuyaLocalFan(TuyaLocalEntity, FanEntity):
 
         _LOGGER.info("%s setting speed to %s", self._config.config_id, percentage)
         values_to_set = self._speed_dps.get_values_to_set(self._device, percentage)
-        if not self.is_on and self._switch_dps:
+        # Some devices encode on/off and speed in the same DP (for example
+        # OFF/LO/HI). In that case the speed value already turns the device
+        # on; merging the switch afterwards would overwrite HI with LO.
+        if (
+            not self.is_on
+            and self._switch_dps
+            and self._switch_dps.id not in values_to_set
+        ):
             values_to_set.update(
                 self._switch_dps.get_values_to_set(self._device, True, values_to_set)
             )
