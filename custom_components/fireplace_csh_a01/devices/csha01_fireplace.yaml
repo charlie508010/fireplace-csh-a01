@@ -57,17 +57,17 @@ entities:
         name: effect
         mapping:
           - dps_val: C0
-            value: C0
+            value: Stufe 0
           - dps_val: C1
-            value: C1
+            value: Stufe 1
           - dps_val: C2
-            value: C2
+            value: Stufe 2
           - dps_val: C3
-            value: C3
+            value: Stufe 3
           - dps_val: C4
-            value: C4
+            value: Stufe 4
           - dps_val: C5
-            value: C5
+            value: Stufe 5
 
   - entity: light
     name: Ember bed
@@ -96,17 +96,17 @@ entities:
         name: effect
         mapping:
           - dps_val: F0
-            value: F0
+            value: Stufe 0
           - dps_val: F1
-            value: F1
+            value: Stufe 1
           - dps_val: F2
-            value: F2
+            value: Stufe 2
           - dps_val: F3
-            value: F3
+            value: Stufe 3
           - dps_val: F4
-            value: F4
+            value: Stufe 4
           - dps_val: F5
-            value: F5
+            value: Stufe 5
 
   # A two-speed fan maps cleanly to Matter Fan Control, which Alexa supports.
   # Both controls share DP 4: OFF, LO (Stufe 1), HI (Stufe 2).
@@ -187,15 +187,15 @@ entities:
         name: option
         mapping:
           - dps_val: "01"
-            value: "1"
+            value: Stufe 1
           - dps_val: "02"
-            value: "2"
+            value: Stufe 2
           - dps_val: "03"
-            value: "3"
+            value: Stufe 3
           - dps_val: "04"
-            value: "4"
+            value: Stufe 4
           - dps_val: "05"
-            value: "5"
+            value: Stufe 5
 
   - entity: select
     name: Ember bed color
@@ -208,17 +208,17 @@ entities:
         name: option
         mapping:
           - dps_val: F0
-            value: F0
+            value: Stufe 0
           - dps_val: F1
-            value: F1
+            value: Stufe 1
           - dps_val: F2
-            value: F2
+            value: Stufe 2
           - dps_val: F3
-            value: F3
+            value: Stufe 3
           - dps_val: F4
-            value: F4
+            value: Stufe 4
           - dps_val: F5
-            value: F5
+            value: Stufe 5
 
   - entity: select
     name: Flame brightness
@@ -231,15 +231,15 @@ entities:
         name: option
         mapping:
           - dps_val: L1
-            value: L1
+            value: Stufe 1
           - dps_val: L2
-            value: L2
+            value: Stufe 2
           - dps_val: L3
-            value: L3
+            value: Stufe 3
           - dps_val: L4
-            value: L4
+            value: Stufe 4
           - dps_val: L5
-            value: L5
+            value: Stufe 5
 
   - entity: select
     name: Flame color
@@ -252,17 +252,227 @@ entities:
         name: option
         mapping:
           - dps_val: C0
-            value: C0
+            value: Stufe 0
           - dps_val: C1
-            value: C1
+            value: Stufe 1
           - dps_val: C2
-            value: C2
+            value: Stufe 2
           - dps_val: C3
-            value: C3
+            value: Stufe 3
           - dps_val: C4
-            value: C4
+            value: Stufe 4
           - dps_val: C5
-            value: C5
+            value: Stufe 5
+
+  - entity: select
+    name: Matter Test 01
+    icon: mdi:palette-outline
+    dps:
+      - id: 101
+        type: string
+        name: option
+        mapping:
+          - dps_val: C0
+            value: Stufe 0
+          - dps_val: C1
+            value: Stufe 1
+          - dps_val: C2
+            value: Stufe 2
+          - dps_val: C3
+            value: Stufe 3
+          - dps_val: C4
+            value: Stufe 4
+          - dps_val: C5
+            value: Stufe 5
+
+  - entity: select
+    name: Matter Test 02
+    icon: mdi:palette-outline
+    dps:
+      - id: 101
+        type: string
+        name: option
+        mapping:
+          - dps_val: C0
+            value: Stufe 0
+          - dps_val: C1
+            value: Stufe 1
+          - dps_val: C2
+            value: Stufe 2
+          - dps_val: C3
+            value: Stufe 3
+          - dps_val: C4
+            value: Stufe 4
+          - dps_val: C5
+            value: Stufe 5
+
+  - entity: select
+    name: Matter Test 03
+    icon: mdi:palette-outline
+    dps:
+      - id: 101
+        type: string
+        name: option
+        mapping:
+          - dps_val: C0
+            value: Stufe 0
+          - dps_val: C1
+            value: Stufe 1
+          - dps_val: C2
+            value: Stufe 2
+          - dps_val: C3
+            value: Stufe 3
+          - dps_val: C4
+            value: Stufe 4
+          - dps_val: C5
+            value: Stufe 5
+
+  - entity: select
+    name: Matter Test 04
+    icon: mdi:palette-outline
+    dps:
+      - id: 101
+        type: string
+        name: option
+        mapping:
+          - dps_val: C0
+            value: Stufe 0
+          - dps_val: C1
+            value: Stufe 1
+          - dps_val: C2
+            value: Stufe 2
+          - dps_val: C3
+            value: Stufe 3
+          - dps_val: C4
+            value: Stufe 4
+          - dps_val: C5
+            value: Stufe 5
+
+  - entity: select
+    name: Matter Test 05
+    icon: mdi:palette-outline
+    dps:
+      - id: 101
+        type: string
+        name: option
+        mapping:
+          - dps_val: C0
+            value: Stufe 0
+          - dps_val: C1
+            value: Stufe 1
+          - dps_val: C2
+            value: Stufe 2
+          - dps_val: C3
+            value: Stufe 3
+          - dps_val: C4
+            value: Stufe 4
+          - dps_val: C5
+            value: Stufe 5
+
+  - entity: select
+    name: Matter Test 06
+    icon: mdi:palette-outline
+    dps:
+      - id: 101
+        type: string
+        name: option
+        mapping:
+          - dps_val: C0
+            value: Stufe 0
+          - dps_val: C1
+            value: Stufe 1
+          - dps_val: C2
+            value: Stufe 2
+          - dps_val: C3
+            value: Stufe 3
+          - dps_val: C4
+            value: Stufe 4
+          - dps_val: C5
+            value: Stufe 5
+
+  - entity: select
+    name: Matter Test 07
+    icon: mdi:palette-outline
+    dps:
+      - id: 101
+        type: string
+        name: option
+        mapping:
+          - dps_val: C0
+            value: Stufe 0
+          - dps_val: C1
+            value: Stufe 1
+          - dps_val: C2
+            value: Stufe 2
+          - dps_val: C3
+            value: Stufe 3
+          - dps_val: C4
+            value: Stufe 4
+          - dps_val: C5
+            value: Stufe 5
+
+  - entity: select
+    name: Matter Test 08
+    icon: mdi:palette-outline
+    dps:
+      - id: 101
+        type: string
+        name: option
+        mapping:
+          - dps_val: C0
+            value: Stufe 0
+          - dps_val: C1
+            value: Stufe 1
+          - dps_val: C2
+            value: Stufe 2
+          - dps_val: C3
+            value: Stufe 3
+          - dps_val: C4
+            value: Stufe 4
+          - dps_val: C5
+            value: Stufe 5
+
+  - entity: select
+    name: Matter Test 09
+    icon: mdi:palette-outline
+    dps:
+      - id: 101
+        type: string
+        name: option
+        mapping:
+          - dps_val: C0
+            value: Stufe 0
+          - dps_val: C1
+            value: Stufe 1
+          - dps_val: C2
+            value: Stufe 2
+          - dps_val: C3
+            value: Stufe 3
+          - dps_val: C4
+            value: Stufe 4
+          - dps_val: C5
+            value: Stufe 5
+
+  - entity: select
+    name: Matter Test 10
+    icon: mdi:palette-outline
+    dps:
+      - id: 101
+        type: string
+        name: option
+        mapping:
+          - dps_val: C0
+            value: Stufe 0
+          - dps_val: C1
+            value: Stufe 1
+          - dps_val: C2
+            value: Stufe 2
+          - dps_val: C3
+            value: Stufe 3
+          - dps_val: C4
+            value: Stufe 4
+          - dps_val: C5
+            value: Stufe 5
 
   - entity: sensor
     name: Target temperature
